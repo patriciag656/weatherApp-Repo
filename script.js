@@ -3,7 +3,15 @@ let weather = {
     fetchWeather: function(city){
         fetch(
             "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + this.apiKey
-        ).then((response) => response.json()).then((data) => this.displayWeather(data));
+        ).then((response) => {
+            if(!response.ok) {
+               document.querySelector(".city").innerText = "Weather Not Available";
+               document.querySelector(".weather").style.visibility = "hidden";
+                
+            }
+            return response.json();
+        })
+        .then((data) => this.displayWeather(data));
     },
     displayWeather: function(data){
         const {name} = data; 
@@ -17,7 +25,7 @@ let weather = {
         document.querySelector(".description").innerText = description; 
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".wind").innerText = "Wind Speed: " + speed + " mph";
-        
+        document.querySelector(".weather").classList.remove("loading"); 
         
     },
     search: function(){
@@ -38,4 +46,6 @@ if(event.key === "Enter")
 })
 
 
+
+weather.fetchWeather("Denver");
 
