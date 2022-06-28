@@ -60,4 +60,16 @@ input.search-box{
 
 h1.temp{
     margin: 0; 
+    margin-bottom: .4em;
 }
+
+.description{
+    text-transform: capitalize;
+    margin-left: 5px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+
+}
+
