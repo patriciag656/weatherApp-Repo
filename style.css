@@ -1,33 +1,58 @@
 body{
     background-color: #222;
-    color: white;
+    color: black;
     font-family: 'Poppins', sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url("https://source.unsplash.com/1600x900/?landscape");
+    background-image: url('./a2.png');
+    background-size:cover;
+    background-position: center;
+    
+    
+    /* background-image: url("https://source.unsplash.com/1600x900/?landscape"); */
     font-size: 120%;
+}
+.error{
+    background-color: #f29b9bd0;
+    padding: 1.5em;
+    border-radius: 30px;
+    box-sizing: border-box;
+    width: 496.8px;
+    margin: 0em;
+    margin-bottom: .2em;
+    color: white;
+    text-align: center;
+    font-size: 100%;
+    text-decoration: underline;
+    visibility: hidden;
+    position: fixed;
+    top: 80px;
 }
 
 
 .card{
-    background-color: #000000d0;
+    background-color: #f29b9b; 
     padding: 2em;
     border-radius: 30px;
     width: 100%;
     max-width: 420px;
     margin: 1em;
+    margin-top: 0em;
     color: white;
-  
-
+    z-index: 0;
+    position: absolute;
+    box-shadow: 10px 10px 5px rgb(102, 102, 102);
 }
 
 .search {
     display: flex;
     justify-content: center;
     align-items: center;
+   
   
 }
 button {
@@ -44,7 +69,7 @@ button {
 }
 
 button:hover{
-    background: #7c7c7c6b;
+    background: #f89999;
 }
 
 input.search-box{
@@ -58,7 +83,10 @@ input.search-box{
     font-size: 105%;
     width: calc(100% - 100px);
 }
-
+::placeholder {
+    color: white;
+    
+  }
 h1.temp{
     margin: 0; 
     margin-bottom: .4em;
@@ -71,6 +99,7 @@ h1.temp{
 .flex{
     display: flex;
     align-items: center;
+    margin: 0;
 
 }
 
@@ -87,4 +116,11 @@ h1.temp{
     position: absolute; 
     top: 0; 
 }
-
+.flower{
+    width: 8%;
+    height: auto;
+    z-index: 4;
+    margin-left: 320px;
+    margin-top: 150px;
+    visibility: hidden;
+}
