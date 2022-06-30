@@ -1,6 +1,5 @@
 body{
-    background-color: #222;
-    color: black;
+  
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
@@ -8,34 +7,41 @@ body{
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url('./a2.png');
+    padding: 0;
+    background-image: url('./imgs/a2.png');
     background-size:cover;
     background-position: center;
-    
+    position: relative;
     
     /* background-image: url("https://source.unsplash.com/1600x900/?landscape"); */
     font-size: 120%;
 }
+/*
+#f29b9bd0
+*/
+
+
 .error{
-    background-color: #f29b9bd0;
+    background-color: #f59593;
     padding: 1.5em;
     border-radius: 30px;
     box-sizing: border-box;
     width: 496.8px;
     margin: 0em;
-    margin-bottom: .2em;
     color: white;
     text-align: center;
     font-size: 100%;
-    text-decoration: underline;
+    
     visibility: hidden;
     position: fixed;
-    top: 80px;
+    top: 10%; 
+    box-shadow: 15px 15px 25px 0px #878787;
+    
 }
 
 
 .card{
-    background-color: #f29b9b; 
+    background-color: #f59593; 
     padding: 2em;
     border-radius: 30px;
     width: 100%;
@@ -43,9 +49,9 @@ body{
     margin: 1em;
     margin-top: 0em;
     color: white;
-    z-index: 0;
+    z-index: 1;
     position: absolute;
-    box-shadow: 10px 10px 5px rgb(102, 102, 102);
+    box-shadow: 15px 15px 25px 0px #878787;
 }
 
 .search {
@@ -62,18 +68,19 @@ button {
     height: 46px;
     width: 46px;
     outline: none;
-    background: #7c7c7c2b;
+    background: #fb9b9b;
     color: white;
     cursor: pointer; 
     transition: .2s ease-in-out;
+    
 }
 
 button:hover{
-    background: #f89999;
+    background: #f59593;
 }
 
 input.search-box{
-    background: #7c7c7c2b;
+    background: #fb9b9b;
     border: none; 
     outline: none;
     padding: .4em 1em ; 
@@ -82,9 +89,12 @@ input.search-box{
     font-family: inherit;
     font-size: 105%;
     width: calc(100% - 100px);
+    
+  
 }
 ::placeholder {
     color: white;
+    opacity: 80%;
     
   }
 h1.temp{
@@ -94,7 +104,8 @@ h1.temp{
 
 .description{
     text-transform: capitalize;
-    margin-left: 5px;
+    margin-left: 10px;
+    
 }
 .flex{
     display: flex;
@@ -119,8 +130,17 @@ h1.temp{
 .flower{
     width: 8%;
     height: auto;
-    z-index: 4;
+    z-index: 2;
     margin-left: 320px;
     margin-top: 150px;
-    visibility: hidden;
+    opacity: 50%;
+   
 }
+
+.icon{
+    height: 30px;
+    width: auto;
+
+}
+
+

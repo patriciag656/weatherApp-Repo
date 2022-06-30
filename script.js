@@ -1,3 +1,10 @@
+const tl = gsap.timeline({defaults: {duration: 2}})
+
+tl.fromTo(".card, .flower", {y: -700, rotation: '-30deg'},{  ease: "bounce.out", y: 0 , rotation: '0deg'});
+tl.fromTo(".weather", {opacity: 0},{ duration: .5, opacity: 1});
+
+
+
 
 let weather = {
     'apiKey' : "ef1bd83351330db6cb3aacc4bb6210a3",
@@ -26,7 +33,9 @@ let weather = {
         console.log(name, icon, description, temp, humidity, speed);
         document.querySelector(".city").innerText = "Weather In " + name;
         document.querySelector(".temp").innerText = Math.floor(temp) + "° F"; 
-        document.querySelector(".icon").src = "https://openweathermap.org/img/wn/"+ icon +".png";
+        document.querySelector(".icon").src = "./imgs/"+ icon +".svg";
+        
+       
         document.querySelector(".description").innerText = description; 
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".wind").innerText = "Wind Speed: " + Math.floor(speed) + " mph";
@@ -54,4 +63,3 @@ if(event.key === "Enter")
 
 
 weather.fetchWeather("Denver");
-
