@@ -8,7 +8,7 @@ body{
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-image: url('./imgs/a2.png');
+    background-image: url('./imgs/basic.png');
     background-size:cover;
     background-position: center;
     position: relative;
@@ -19,8 +19,9 @@ body{
 /*
 #f29b9bd0
 */
-
-
+.greeting{
+    font-family:  'Poppins', monospace;;
+}
 .error{
     background-color: #f59593;
     padding: 1.5em;
@@ -51,7 +52,23 @@ body{
     color: white;
     z-index: 1;
     position: absolute;
-    box-shadow: 15px 15px 25px 0px #878787;
+    /* box-shadow: 15px 15px 25px 0px #878787; */
+}
+
+.offsetCard{
+    background-color: #FFCBCB; 
+    box-sizing: border-box;
+    padding: 2em;
+    border-radius: 30px;
+    width: 496.8px;
+    height: 387.28px;
+    margin: 0em;
+    margin-top: 1em;
+    margin-left: 2em;
+    color: white;
+    z-index: 0;
+    position: absolute;
+  
 }
 
 .search {
