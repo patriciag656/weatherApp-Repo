@@ -2,7 +2,8 @@ const tl = gsap.timeline({defaults: {duration: 2}})
 
 tl.fromTo(".card, .flower", {y: -700, rotation: '-30deg'},{  ease: "bounce.out", y: 0 , rotation: '0deg'});
 tl.fromTo(".weather", {opacity: 0},{ duration: .5, opacity: 1});
-tl.fromTo(".offsetCard", {opacity: 0}, {duration: .5, opacity: 1}, "<")
+tl.fromTo(".greeting", {opacity: 0}, {opacity: .4})
+
 
 
 
